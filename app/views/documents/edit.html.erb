@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="content-heading clearfix">
+        <div class="pull-left">
+            <h4>Post: <%= @document.id %> (<%= @document.name %>)</h4>
+        </div>
+        <div class="pull-right">
+            <div class="btn-group-xs">
+                <button class="btn btn-xs btn-primary" data-perform="back">Back</button>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <%= render partial: 'stratosphere/attachment_field', locals: { model: @document } %>
+    </div>
+</div>

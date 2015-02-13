@@ -1,0 +1,23 @@
+<div class="container" data-paginated="true" data-total-pages="<%= MusicVideo.total_pages %>" data-model="music_video" data-has-rows="true">
+    <div class="content-heading clearfix">
+        <div class="pull-left">
+            <h4>Music Videos</h4>
+        </div>
+        <div class="pull-right">
+            <div class="btn-group-xs">
+                <button class="btn btn-xs btn-success" data-perform="create" data-model="music_video">New Music Video</button>
+            </div>
+        </div>
+    </div>
+    <% @music_videos.each_slice(3) do |row| %>
+        <div class="row">
+            <% row.each do |music_video| %>
+                <div class="col-sm-4 image-container">
+                    <%= link_to music_video_path(music_video) do %>
+                        <%= image_tag music_video.video.url(:thumb), class: 'img-responsive' %>
+                    <% end %>
+                </div>
+            <% end %>
+        </div>
+    <% end %>
+</div>

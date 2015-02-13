@@ -1,0 +1,336 @@
+@import "compass";
+@import "breakpoint";
+
+html, body {
+  font-family: 'Open Sans', sans-serif !important;
+  color: #555555 !important;
+}
+
+body {
+  background: #FAFAFA !important;
+  padding: 20px 0;
+  
+  &.has-navbar {
+    padding-top: 70px;
+  }
+}
+
+a {
+  @include transition(all 200ms);
+
+  &:hover {
+    text-decoration: none !important;
+  }
+  
+  &.btn {
+    display: inline-block;
+    color: #ffffff;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+  
+  i {
+    pointer-events: none;
+    
+  }
+  
+}
+
+button, .btn {
+  &:hover, &:active, &:focus {
+    outline: none !important;
+  }
+  i {
+    pointer-events: none;
+  }
+}
+
+table {
+  background-color: #ffffff !important;
+  border-color: #e7e7e7 !important;
+  
+  a {
+    display: inline-block;
+    &:not(:last-of-type) {
+      margin-right: 5px;
+      padding-right: 10px;
+      border-right: solid 1px #e7e7e7;
+    }
+  }
+}
+
+.row {
+  @include animation-duration(800ms !important);
+}
+
+.hidden-inline-xs {
+  display: none !important;
+
+  @include breakpoint(768px) {
+    display: inline-block !important;
+  }
+}
+.visible-inline-xs {
+  display: inline-block !important;
+  
+  @include breakpoint(768px) {
+    display: none !important;
+  }
+}
+
+.turbolinks-progress-bar::before {
+  background-color: #3498db !important;
+  height: 2px !important;
+}
+
+.navbar {
+  @include transition(box-shadow 150ms);
+  
+  &.has-shadow {
+    box-shadow: 0 3px 2px -2px rgba(200, 200, 200, 0.4);
+    border-color: #E0E0E0;
+  }
+  
+  .navbar-brand {
+    i {
+      position: relative;
+      top: 1px;
+      color: #3498db;
+      margin-right: 5px;
+      text-shadow: 1px 0 #2980b9;
+    }
+    
+    span {
+      font-weight: 300;
+    }
+  }
+  
+  .navbar-nav {
+    font-weight: 300;
+    font-size: 13px;
+    text-align: center;
+    
+    a {
+      &.active {
+        color: #3498db;
+        text-decoration: none;
+        &:hover {
+          color: #3498db;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  margin-top: 20px;
+  
+  &.fixed {
+    position: absolute;
+    bottom: 20px;
+    margin-top: 0;
+  }
+  
+  a {
+    font-size: 10px;
+    color: #999;
+    
+    &:hover, &:focus {
+      text-decoration: none;
+      color: #777;
+    }
+    
+    &:visited {
+      text-decoration: none;
+    }
+  }
+  
+  ul {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      padding: 0 3px;
+      font-size: 10px;
+      color: #858585;
+    }
+  }
+}
+
+.home-container {
+  margin-bottom: 20px;
+  .social {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    a {
+      color: #555555;
+
+      &:not(:last-of-type) {
+        margin-right: 10px;
+      }
+
+      &:hover {
+        color: #2980b9;
+      }
+
+    }
+
+  }
+
+  .heading {
+    margin-top: 80px;
+
+    h1 {
+      margin: 20px 0 10px 0;
+      font-weight: 300;
+      color: #777777;
+    }
+
+    h4 {
+      font-weight: 300;
+      color: #777777;
+    }
+
+    code {
+      color: #3498DB;
+      background-color: rgba(52, 152, 219, 0.08);
+    }
+
+    .logo-container {
+      margin: 0 0 20px 0;
+
+      .logo {
+        font-size: 96px;
+        color: #3498db;
+        text-shadow: 2px 0 #2980b9;
+      }
+    }
+
+    .btn-container {
+      margin-top: 20px;
+    }
+
+    .btn {
+      width: 122px;
+
+      &:first-of-type {
+        margin-right: 15px;
+      }
+
+      i {
+        margin-right: 3px;
+      }
+    }
+  }
+
+  .examples {
+    margin-top: 40px;
+
+    @include breakpoint(768px) {
+      margin-top: 80px;
+    }
+
+    a {
+      display: block;
+      height: 160px;
+      padding: 38px 0;
+      color: #3498db;
+
+      &:hover, &:active, &:focus {
+        color: #2980b9;
+        text-decoration: none;
+      }
+    }
+
+    h5 {
+      margin-top: 12px;
+    }
+
+    .col-sm-4 {
+      border-bottom: solid 1px #e7e7e7;
+      
+      &:first-of-type {
+        border-top: solid 1px #e7e7e7;
+      }
+
+      @include breakpoint(768px) {
+        border-bottom: none;
+        
+        &:first-of-type {
+          border-top: none;
+        }
+        
+        &:not(:last-of-type) {
+          border-right: solid 1px #e7e7e7;
+        }
+      }
+    }
+
+    .fa-lg {
+      font-size: 2em;
+    }
+  }
+}
+
+.image-container {
+  margin-bottom: 20px;
+  
+  &:hover {
+    img {
+      @include transform( scale(1.02) );
+    }
+  }
+  
+  img {
+    display: block;
+    margin: 0 auto;
+    @include transition(transform 200ms);
+  }
+}
+
+.content-heading {
+  margin: 0 0 20px 0;
+  padding: 0 0 10px 0;
+  border-bottom: solid 1px #e7e7e7;
+
+  h4 {
+    position: relative;
+    top: 2px;
+    margin: 0;
+    font-weight: 300;
+  }
+  
+  .btn {
+    i {
+      margin-right: 3px;
+    }
+  }
+}
+
+.post-img {
+  margin: 0 auto;
+}
+
+.stratosphere-container {
+  
+  .video-js {
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    margin-right: 5px;
+  }
+  
+  .file-name {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}

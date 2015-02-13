@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="content-heading clearfix">
+        <div class="pull-left">
+            <h4><%= @music_video.video.file_name %></h4>
+        </div>
+        <div class="pull-right">
+            <div class="btn-group btn-group-xs">
+                <button class="btn btn-primary" data-perform="back">Back</button>
+                <button class="btn btn-primary" data-perform="edit" data-model="music_video" data-id="<%= @music_video.id %>">Edit</button>
+                <button class="btn btn-primary" data-perform="delete" data-model="music_video" data-id="<%= @music_video.id %>">Delete</button>
+            </div>
+        </div>
+    </div>
+    <video class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" poster="<%= @music_video.video.url(:thumb) %>">
+        <source src="<%= @music_video.video.url(:mp4) %>" type="video/mp4">
+        <source src="<%= @music_video.video.url(:webm) %>" type="video/webm">
+    </video>
+</div>

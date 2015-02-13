@@ -1,0 +1,46 @@
+<div class="home-container text-center">
+    <div class="social">
+        <a href="http://zacharygolba.com" target="_blank"><i class="fa fa-globe"></i></a>
+        <a href="https://rubygems.org/gems/stratosphere" target="_blank"><i class="fa fa-diamond"></i></a>
+        <a href="https://github.com/zacharygolba/stratosphere" target="_blank"><i class="fa fa-github"></i></a>
+    </div>
+    <div class="heading">
+        <div class="logo-container">
+            <i class="logo fa fa-fw fa-cloud-upload"></i>
+        </div>
+        <code>gem 'stratosphere'</code>
+        <h1>stratosphere</h1>
+        <h4>attachments in the cloud</h4>
+    </div>
+    <div class="container examples">
+        <div class="row">
+            <div class="col-sm-4 text-center">
+                <%= link_to documents_path do %>
+                    <div class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-file-pdf-o fa-stack-1x fa-inverse"></i>
+                    </div>
+                    <h5>Basic Attachments</h5>
+                <% end %>
+            </div>
+            <div class="col-sm-4 text-center">
+                <%= link_to posts_path do %>
+                    <div class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-file-image-o fa-stack-1x fa-inverse"></i>
+                    </div>
+                    <h5>Image Attachments</h5>
+                <% end %>
+            </div>
+            <div class="col-sm-4 text-center">
+                <%= link_to music_videos_path do %>
+                    <div class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-file-video-o fa-stack-1x fa-inverse"></i>
+                    </div>
+                    <h5>Video Attachments</h5>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>

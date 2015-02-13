@@ -1,0 +1,7 @@
+<% @posts.each do |post| %>
+    <div class="col-sm-4 image-container">
+        <%= link_to post_path(post) do %>
+            <%= image_tag post.image.url, class: 'img-responsive' %>
+        <% end %>
+    </div>
+<% end %>

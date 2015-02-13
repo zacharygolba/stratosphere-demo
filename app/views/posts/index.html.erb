@@ -1,0 +1,23 @@
+<div class="container" data-paginated="true" data-total-pages="<%= Post.total_pages %>" data-model="post" data-has-rows="true">
+    <div class="content-heading clearfix">
+        <div class="pull-left">
+            <h4>Posts</h4>
+        </div>
+        <div class="pull-right">
+            <div class="btn-group-xs">
+                <button class="btn btn-xs btn-success" data-perform="create" data-model="post">New Post</button>
+            </div>
+        </div>
+    </div>
+    <% @posts.each_slice(3) do |row| %>
+        <div class="row">
+            <% row.each do |post| %>
+                <div class="col-sm-4 image-container">
+                    <%= link_to post_path(post) do %>
+                        <%= image_tag post.image.url, class: 'img-responsive' %>
+                    <% end %>
+                </div>
+            <% end %>
+        </div>
+    <% end %>
+</div>

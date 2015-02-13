@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="content-heading clearfix">
+        <div class="pull-left">
+            <h4><%= @post.title %></h4>
+        </div>
+        <div class="pull-right">
+            <div class="btn-group btn-group-xs">
+                <button class="btn btn-primary" data-perform="back">Back</button>
+                <button class="btn btn-primary" data-perform="edit" data-model="post" data-id="<%= @post.id %>">Edit</button>
+                <button class="btn btn-primary" data-perform="delete" data-model="post" data-id="<%= @post.id %>">Delete</button>
+            </div>
+        </div>
+    </div>
+    <%= image_tag @post.image.url, alt: @post.title, class: 'img-responsive post-img' %>
+</div>

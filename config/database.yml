@@ -1,0 +1,26 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  database: stratosphere-demo
+  pool: 5
+  username: root
+  password: root
+  socket: /tmp/mysql.sock
+
+test:
+  adapter: mysql2
+  encoding: utf8
+  database: test
+  pool: 5
+  username: test
+  password: test
+  timeout: 5000
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  database: stratosphere-demo
+  pool: 5
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/run/mysqld/mysql.sock

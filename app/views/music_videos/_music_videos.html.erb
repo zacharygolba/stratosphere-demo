@@ -1,0 +1,7 @@
+<% @music_videos.each do |music_video| %>
+    <div class="col-sm-4 image-container">
+        <%= link_to music_video_path(music_video) do %>
+            <%= image_tag music_video.video.url(:thumb), class: 'img-responsive' %>
+        <% end %>
+    </div>
+<% end %>

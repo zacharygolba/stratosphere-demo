@@ -1,0 +1,14 @@
+<% @documents.each do |document| %>
+    <tr>
+        <td><%= link_to document.name, document.attachment.url, target: '_blank' %></td>
+        <td><%= document.created_at.strftime('%B %-d, %Y - %-I:%M %p')  %></td>
+        <td class="text-center">
+            <a href="#" data-perform="edit" data-model="document" data-id="<%= document.id %>">
+                <i class="fa fa-pencil"></i>
+            </a>
+            <a href="#" class="text-danger" data-perform="delete" data-model="document" data-id="<%= document.id %>">
+                <i class="fa fa-trash-o"></i>
+            </a>
+        </td>
+    </tr>
+<% end %>

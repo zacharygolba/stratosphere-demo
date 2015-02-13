@@ -1,0 +1,23 @@
+<header id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navigation" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <%= link_to root_path, class: 'navbar-brand' do %>
+                <i class="fa fa-cloud-upload"></i>
+                <span>stratosphere</span>
+            <% end %>
+        </div>
+        <div id="main-navigation" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><%= link_to 'Basic Attachments', documents_path, data: { route: 'documents-index' } %></li>
+                <li><%= link_to 'Image Attachments', posts_path, data: { route: 'posts-index' } %></li>
+                <li><%= link_to 'Video Attachments', music_videos_path, data: { route: 'music_videos-index' } %></li>
+            </ul>
+        </div>
+    </div>
+</header>

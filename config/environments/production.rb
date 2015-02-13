@@ -58,7 +58,7 @@ Rails.application.configure do
   # config.cache_store = :mem_cache_store
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.action_controller.asset_host = 'http://cdn.zachargolba.com/stratosphere/demo'
+  config.action_controller.asset_host = 'http://cdn.zacharygolba.com/stratosphere/demo'
 
   config.static_cache_control = 'public, max-age=31536000'
 

@@ -17,4 +17,4 @@
 /tmp
 /*.idea
 *.DS_Store
-# public/assets
+public/assets

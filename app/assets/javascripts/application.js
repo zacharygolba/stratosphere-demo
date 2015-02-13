@@ -14,8 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap.min
-//= require inflection
+//= require rsvp
 //= require video
+//= require inflection
 //= require jquery.noty.packaged.min
 //= require imagesloaded.pkgd.min
 //= require stratosphere.bundled.min

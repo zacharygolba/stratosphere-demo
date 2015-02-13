@@ -1,6 +1,6 @@
 # stratosphere-demo
 
-Live demo of a production Ruby on Rails application that uses <a href="https://github.com/zachargyolba/stratosphere" target="_blank">stratosphere</a> for attachment handling.
+Live demo of a production Ruby on Rails application that uses <a href="https://github.com/zacharygolba/stratosphere" target="_blank">stratosphere</a> for attachment handling.
 
 <a href="http://stratosphere.zacharygolba.com" target="_blank">Check out the demo app in production!</a>
 

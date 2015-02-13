@@ -1,0 +1,5 @@
+before_script:
+  - mysql -e 'create database stratosphere_demo_test;'
+language: ruby
+rvm:
+  - 2.2.0

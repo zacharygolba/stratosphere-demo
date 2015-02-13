@@ -10,11 +10,8 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  database: test
-  pool: 5
-  username: test
-  password: test
-  timeout: 5000
+  database: stratosphere_demo_test
+  username: travis
 
 production:
   adapter: mysql2

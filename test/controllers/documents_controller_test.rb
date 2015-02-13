@@ -11,21 +11,15 @@ class DocumentsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:documents)
   end
 
-  test "should get new" do
-    get :new
-    assert_response :success
-  end
-
   test "should create document" do
     assert_difference('Document.count') do
       post :create, document: { name: @document.name }
     end
-
-    assert_redirected_to document_path(assigns(:document))
+    assert_response :success
   end
 
   test "should show document" do
-    get :show, id: @document
+    get :show, id: @document if @document.attachment.exists?
     assert_response :success
   end
 
@@ -36,14 +30,13 @@ class DocumentsControllerTest < ActionController::TestCase
 
   test "should update document" do
     patch :update, id: @document, document: { name: @document.name }
-    assert_redirected_to document_path(assigns(:document))
+    assert_redirected_to documents_path
   end
 
   test "should destroy document" do
     assert_difference('Document.count', -1) do
       delete :destroy, id: @document
     end
-
-    assert_redirected_to documents_path
+    assert_response :success
   end
 end

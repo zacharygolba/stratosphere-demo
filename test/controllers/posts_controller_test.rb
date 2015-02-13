@@ -11,21 +11,15 @@ class PostsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:posts)
   end
 
-  test "should get new" do
-    get :new
+  test "should create post" do
+    assert_difference('Post.count') do
+      post :create, post: { title: 'New Post' }
+    end
     assert_response :success
   end
 
-  test "should create post" do
-    assert_difference('Post.count') do
-      post :create, post: {  }
-    end
-
-    assert_redirected_to post_path(assigns(:post))
-  end
-
   test "should show post" do
-    get :show, id: @post
+    get :show, id: @post if @post.image.exists?
     assert_response :success
   end
 
@@ -35,7 +29,7 @@ class PostsControllerTest < ActionController::TestCase
   end
 
   test "should update post" do
-    patch :update, id: @post, post: {  }
+    patch :update, id: @post, post: { title: 'Updated Post' }
     assert_redirected_to post_path(assigns(:post))
   end
 
@@ -43,7 +37,6 @@ class PostsControllerTest < ActionController::TestCase
     assert_difference('Post.count', -1) do
       delete :destroy, id: @post
     end
-
-    assert_redirected_to posts_path
+    assert_response :success
   end
 end

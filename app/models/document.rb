@@ -5,6 +5,10 @@ class Document < ActiveRecord::Base
 
   paginated per_page: 50
 
+  default_scope {
+    order(created_at: :desc)
+  }
+
   scope :with_attachment, -> {
     where.not(attachment_file: nil)
   }

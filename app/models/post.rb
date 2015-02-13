@@ -5,6 +5,10 @@ class Post < ActiveRecord::Base
   
   paginated per_page: 30
   
+  default_scope {
+    order(created_at: :desc)
+  }
+  
   scope :with_image, -> {
     where.not(image_file: nil)
   }

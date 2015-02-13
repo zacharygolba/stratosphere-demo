@@ -21,6 +21,10 @@ class MusicVideo < ActiveRecord::Base
 
   paginated per_page: 30
 
+  default_scope {
+    order(created_at: :desc)
+  }
+
   scope :with_video, -> {
     where.not(video_file: nil)
   }

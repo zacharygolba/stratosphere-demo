@@ -1,3 +1,4 @@
-pidfile "#{File.expand_path('../../tmp/puma/pid', __FILE__)}"
-state_path "#{File.expand_path('../../tmp/puma/state', __FILE__)}"
+pidfile 'tmp/puma/pid'
+state_path 'tmp/puma/state'
 activate_control_app
+bind 'unix:///var/run/puma.sock'

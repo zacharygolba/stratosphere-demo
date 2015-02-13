@@ -5,7 +5,7 @@ development:
   pool: 5
   username: root
   password: root
-  socket: /tmp/mysql.sock
+  socket: /tmp/mysqld.sock
 
 test:
   adapter: mysql2
@@ -23,4 +23,4 @@ production:
   pool: 5
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
-  socket: /var/run/mysqld/mysql.sock
+  socket: /var/run/mysqld/mysqld.sock
